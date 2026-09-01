@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de contato</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <form
+    id="form-contato"
+    action="/enviar-contato"
+    method="post"
+    enctype="multipart/form-data"
+  >
+
+    <!-- Aceite dos termos -->
+    <label>
+      <input type="checkbox" name="aceite" value="sim">
+      Aceito os termos
+    </label>
+
+    <br><br>
+
+    <!-- Gênero -->
+    <label>
+      <input type="radio" name="genero" value="f">
+      Feminino
+    </label>
+
+    <label>
+      <input type="radio" name="genero" value="m">
+      Masculino
+    </label>
+
+    <label>
+      <input type="radio" name="genero" value="outro">
+      Outro
+    </label>
+
+    <br><br>
+
+    <!-- Nome -->
+    <label for="nome">Nome completo:</label>
+    <input
+      type="text"
+      id="nome"
+      name="nome"
+      required
+      minlength="3"
+    >
+
+    <br><br>
+
+    <!-- Telefone -->
+    <label for="telefone">Número de telefone:</label>
+    <input
+      type="tel"
+      id="telefone"
+      name="telefone"
+      pattern="[0-9]{2}[0-9]{5}-[0-9]{4}"
+      title="Formato esperado: 0099999-9999"
+      placeholder="0099999-9999"
+      required
+    >
+
+    <br><br>
+
+    <!-- Foto -->
+    <label for="foto_perfil">Foto de perfil:</label>
+    <input
+      type="file"
+      id="foto_perfil"
+      name="foto_perfil"
+    >
+
+    <br><br>
+
+    <!-- Assunto -->
+    <label for="assunto">Assunto:</label>
+    <select name="assunto" id="assunto">
+      <option value="duvidas">Dúvida</option>
+      <option value="elogio">Elogio</option>
+      <option value="reclamacao">Reclamação</option>
+    </select>
+
+    <br><br>
+
+    <!-- Mensagem -->
+    <label for="mensagem">Mensagem:</label>
+    <textarea
+      id="mensagem"
+      name="mensagem"
+      rows="5"
+      placeholder="Escreva sua mensagem"
+    ></textarea>
+
+    <br><br>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+  <script>
+    const formulario = document.querySelector("#form-contato");
+
+    formulario.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      alert("Mensagem enviada com sucesso!");
+    });
+  </script>
+
+</body>
+</html>
