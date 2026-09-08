@@ -1,0 +1,28 @@
+body {    
+background: #830cd3;
+font-family: Arial;
+}
+.cartao { background: rgba(243, 190, 43, 0.89); }
+#titulo { color: #2563eb; }
+
+#apresentaçao{
+color:#1e2983b;
+background:#dbeafe;
+font-family: Arial;
+font-sizer:18px
+text-aling: center;
+}
+
+body{color:#334155;}
+.destaque {background:#fef08a;}
+#titulo {font-size: 32px;}
+.cartao p {color:#475569;}
+.interesse > li{}
+
+
+<p id="erro" class="aviso">
+atençao!
+</p>
+p{color: blue;}
+.aviso{color: orange;}
+#erro{ color :red;}
