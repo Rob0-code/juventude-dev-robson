@@ -1,0 +1,377 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    background-color: #222;
+    padding: 20px;
+}
+
+.menu nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu a.ativo {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header:not(.menu) {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+}
+
+.preco {
+    display: block;
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    background-color: #222;
+    color: white;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape-coluna h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.rodape-coluna a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.rodape-coluna a:hover {
+    text-decoration: underline;
+}
+
+.logo-rodape {
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-rodape img {
+    width: 150px;
+    height: auto;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .menu nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logo-rodape {
+        order: -1;
+    }
+
+}
+
+
+
+.pagina-contato {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.pagina-contato h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.texto-contato {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+}
+
+.contato-info,
+.contato-formulario {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato-info h2,
+.contato-formulario h2 {
+    margin-top: 0;
+}
+
+.contato-info p {
+    margin: 20px 0;
+    color: #555;
+}
+
+.contato-formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-formulario label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.contato-formulario input,
+.contato-formulario textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.contato-formulario textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contato-formulario button {
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+.pagina-sobre {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.sobre-introducao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sobre-introducao h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.sobre-introducao p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.sobre-texto {
+    text-align: left;
+}
+
+.sobre-texto h2 {
+    font-size: 28px;
+}
+
+.sobre-texto p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.sobre-valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.sobre-valores div {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-valores h2 {
+    margin-top: 0;
+}
+
+.sobre-valores p {
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-valores {
+        grid-template-columns: 1fr;
+    }
+
+}
